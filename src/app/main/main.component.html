@@ -1,0 +1,395 @@
+
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <h4 class="page-title">TOUR TABLE</h4>
+                                <!-- <div class="page-title-right">
+                                        <ol class="breadcrumb p-0 m-0">
+                                            <li class="breadcrumb-item"><a href="#">Velonic</a></li>
+                                            <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                                            <li class="breadcrumb-item active">Data Table</li>
+                                        </ol>
+                                    </div> -->
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body table-responsive">
+                                    <h4 class="m-t-0 header-title mb-4"><b>Tour Management</b></h4>
+
+                                    <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Image</th>
+                                                <th>Name</th>
+                                                <th>Start</th>
+                                                <th>End</th>
+                                                <th>Price</th>
+                                                <th>Status</th>
+                                                <th></th>
+
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr *ngFor="let it of itemList | async" >
+                                                <td class="sorting_1">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">{{ it.id }}</font>
+                                                    </font>
+                                                </td>
+                                                <td>
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">{{ it.image }}</font>
+                                                    </font>
+                                                </td>
+                                                <td>
+                                                    <font style="vertical-align: inherit;">
+                                                       
+                                                    
+                                                        <font style="vertical-align: inherit;">{{ it.name }}</font>
+                                                    </font>
+                                                </td>
+                                                <td>
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">{{ it.start }}</font>
+                                                    </font>
+                                                </td>
+                                                <td>
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">{{ it.end }}</font>
+                                                    </font>
+                                                </td>
+                                                <td>
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">{{ it.price }}</font>
+                                                    </font>
+                                                </td>
+                                                <td>
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">{{ it.status }}</font>
+                                                    </font>
+                                                </td>
+                                                <td>
+                                                    <font style="vertical-align: inherit;"></font>
+                                                        
+                                                            <button
+                                                                class="btn btn-primary waves-effect waves-light mr-1"
+                                                                type="submit" (click)="onEditPost(it)" href="#">
+                                                                UPDATE
+                                                            </button>
+
+                                                            <button
+                                                                class="btn btn-primary waves-effect waves-light mr-1"
+                                                                type="submit" (click)="onDeletePost(it)" href="#">
+                                                                DELETE
+                                                            </button>
+                                                   
+                                                </td>
+
+
+                                            </tr>
+
+                                        </tbody>
+                                        <tfoot>
+                                            <th rowspan="1" colspan="1">ID</th>
+                                            <th rowspan="1" colspan="1">Image</th>
+                                            <th rowspan="1" colspan="1">Name</th>                                         
+                                            <th rowspan="1" colspan="1">Start</th>
+                                            <th rowspan="1" colspan="1">End</th>
+                                            <th rowspan="1" colspan="1">Price</th>
+                                            <th rowspan="1" colspan="1">Status</th>
+                                        </tfoot>
+                                        
+
+
+
+                                    </table>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-5">
+                                            <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">
+                                                Showing 1 to 10 of 57 entries</div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-7">
+                                            <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                                                <ul class="pagination">
+                                                    <li class="paginate_button page-item previous disabled"
+                                                        id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0"
+                                                            data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                                                    <li class="paginate_button page-item active"><a href="#"
+                                                            aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
+                                                            class="page-link">1</a></li>
+                                                    <li class="paginate_button page-item "><a href="#"
+                                                            aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0"
+                                                            class="page-link">2</a></li>
+                                                    <li class="paginate_button page-item "><a href="#"
+                                                            aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0"
+                                                            class="page-link">3</a></li>
+                                                    <li class="paginate_button page-item "><a href="#"
+                                                            aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0"
+                                                            class="page-link">4</a></li>
+                                                    <li class="paginate_button page-item "><a href="#"
+                                                            aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0"
+                                                            class="page-link">5</a></li>
+                                                    <li class="paginate_button page-item "><a href="#"
+                                                            aria-controls="DataTables_Table_0" data-dt-idx="6" tabindex="0"
+                                                            class="page-link">6</a></li>
+                                                    <li class="paginate_button page-item next" id="DataTables_Table_0_next"><a href="#"
+                                                            aria-controls="DataTables_Table_0" data-dt-idx="7" tabindex="0"
+                                                            class="page-link">Next</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+    
+                        </div>
+
+
+                        <!-- <div class="card">
+                            <h5 class="card-header">Data Processing</h5>
+                            <div class="card-body">
+                                <form [formGroup]="insertForm" (ngSubmit)="onInsert(insertForm.value)" id="validationform"
+                                    data-parsley-validate="" novalidate="">
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">ID </label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input formControlName="ID" type="text" required="" placeholder="..." class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Name</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input formControlName="NAME" type="text" required="" placeholder="..." class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Image</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input formControlName="IMAGE" type="text" required="" placeholder="..." class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Start</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input formControlName="DEVELOPER" type="text" required="" placeholder="..."
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">End</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input formControlName="QUANTITY" type="text" required="" placeholder="..."
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Price</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input formControlName="PRICE" type="text" required="" placeholder="..." class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Status</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input formControlName="PRICE" type="text" required="" placeholder="..." class="form-control">
+                                        </div>
+                                    </div>
+                                    
+                    
+                                    <div class="form-group row text-right">
+                                        <div class="col col-sm-10 col-lg-9 offset-sm-1 offset-lg-0">
+                                            <button type="submit" href="#" class="btn btn-space btn-primary">Add</button>
+                                            <button type="submit" href="#" class="btn btn-space btn-primary">Save</button>
+                    
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> -->
+
+                        <!-- kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk -->
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-4">Basic Form</h4>
+
+                                    <form class="parsley-examples" [formGroup]="insertForm" (ngSubmit)="onInsert(insertForm.value)">  
+                                        
+                                        <div class="form-group">
+                                            <label for="ID">ID<span class="text-danger">*</span></label>
+                                            <input type="text" name="01" parsley-trigger="change" required=""
+                                                placeholder="Enter ID" class="form-control" id="ID" formControlName="id">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ID">IMAGE<span class="text-danger">*</span></label>
+                                            <input type="text" name="image" parsley-trigger="change" required=""
+                                                placeholder="Enter IMAGE" class="form-control" id="image" formControlName="image">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">Name<span class="text-danger">*</span></label>
+                                            <input type="name" name="name" parsley-trigger="change" required=""
+                                                placeholder="Enter name" class="form-control" id="name" formControlName="name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="start">Start<span class="text-danger">*</span></label>
+                                            <input type="start" name="start" parsley-trigger="change" required=""
+                                                placeholder="start" class="form-control" id="start"  formControlName="start">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="end">End<span class="text-danger">*</span></label>
+                                            <input id="end" type="end" placeholder="end" required="" 
+                                                class="form-control"  formControlName="end">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="price">Price<span class="text-danger">*</span></label>
+                                            <input id="price" type="price" placeholder="price" required=""
+                                                class="form-control" formControlName="price">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="status">Status<span class="text-danger">*</span></label>
+                                            <input id="status" type="status" placeholder="status" required=""
+                                                class="form-control" formControlName="status">
+                                        </div>
+                                        <div class="form-group text-right mb-0">
+                                            <button type="submit" href="#" class="btn btn-space btn-primary">Add</button>
+                                            <button type="submit" href="#" class="btn btn-space btn-primary">Save</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                     <!-- <div class="container-input-file">
+                                            <label class="custom-file">
+                                                <input type="file" formControlName="imagePost" (change)="handleImage($event)">
+                                                <mat-icon>cloud_upload</mat-icon>
+                                                <span>CHOOSE IMAGE</span>
+                                            </label>
+                                        </div> -->
+                            <!-- end card -->
+                    <!-- end row -->
+
+
+
+                </div>
+                <!-- end container-fluid -->
+
+            <!-- </div> -->
+            <!-- end content  -->
+
+
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            2015 - 2020 &copy; Velonic theme by <a href="">Coderthemes</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        <!-- </div> -->
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    <!-- </div> -->
+    <!-- END wrapper -->
+
+
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div class="rightbar-title">
+            <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                <i class="mdi mdi-close"></i>
+            </a>
+            <h4 class="font-17 m-0 text-white">Theme Customizer</h4>
+        </div>
+        <div class="slimscroll-menu">
+
+            <div class="p-4">
+                <div class="alert alert-warning" role="alert">
+                    <strong>Customize </strong> the overall color scheme, layout, etc.
+                </div>
+                <div class="mb-2">
+                    <img src="assets\images\layouts\light.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked="">
+                    <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets\images\layouts\dark.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch"
+                        data-bsstyle="assets/css/bootstrap-dark.min.css" data-appstyle="assets/css/app-dark.min.css">
+                    <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets\images\layouts\rtl.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-5">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch"
+                        data-appstyle="assets/css/app-rtl.min.css">
+                    <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+                </div>
+
+            </div>
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <!-- /Right-bar -->
+
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+    <div class="form-group row text-right">
+        <div class="col col-sm-10 col-lg-9 offset-sm-1 offset-lg-0">
+            <!-- <button (click)="Add()"  href="#" class="btn btn-space btn-primary">Add</button>
+                <button (click)="Update()"  href="#" class="btn btn-space btn-primary">Update</button>
+                <button (click)="Delete()"  href="#" class="btn btn-space btn-primary">Delete</button> -->
+        </div>
+    </div>
+    <a href="javascript:void(0);" class="right-bar-toggle demos-show-btn">
+        <i class="mdi mdi-settings-outline mdi-spin"></i> &nbsp;Choose Demos
+    </a>
+
+
